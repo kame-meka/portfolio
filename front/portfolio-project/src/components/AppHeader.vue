@@ -6,10 +6,13 @@
     >
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>MyPortfolioSite</v-toolbar-title>
-      <v-tabs>
+      <v-tabs
+        dark
+      >
         <v-tab
           v-for="(menuItem, index) in menuItems"
           :key="index"
+          :to="menuItem.url"
         >
           {{ menuItem.name }}
         </v-tab>
@@ -17,8 +20,8 @@
     </v-app-bar>
     <v-navigation-drawer
       v-model="drawer"
-      absolute
       temporary
+      fixed
     >
       <v-list
         nav
@@ -28,6 +31,7 @@
           <v-list-item
             v-for="(menuItem, index) in menuItems"
             :key="index"
+            :to="menuItem.url"
           >
             <v-list-item-title>{{ menuItem.name }}</v-list-item-title>
           </v-list-item>
@@ -41,7 +45,6 @@
 import constants from '../common/constants'
 
 export default {
-  name: 'AppHeader',
   data () {
     return {
       drawer: false,
@@ -50,24 +53,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-.v-toolbar__title {
-  overflow: visible !important;
-  margin-right: 50px !important;
-}
-
-.v-app-bar-nav-icon {
-  @include display_pc {
-    display: none !important;
-  }
-}
-
-.v-tabs {
-  display: none;
-  @include display_pc {
-    display: block !important;
-  }
-}
-</style>

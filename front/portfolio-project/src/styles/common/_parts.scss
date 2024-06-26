@@ -1,0 +1,15 @@
+.section__title {
+  padding-top: 120px;
+  text-align: center;
+
+  &-text {
+    font-weight: 700;
+    font-size: 40px;
+    color: #e65f78;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

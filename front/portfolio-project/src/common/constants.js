@@ -2,27 +2,41 @@ export default {
   menuItems: [
     {
       name: 'HOME',
-      url: '#'
+      url: '/'
     },
     {
       name: 'ABOUT',
-      url: '#'
+      url: '/about'
     },
     {
       name: 'WORK',
-      url: '#'
+      url: '/work'
     },
     {
       name: 'SERVICE',
-      url: 'https://www.notion.so/d43109f934104fa08706a149e11d9ffc'
+      url: '/service'
     },
     {
       name: 'BLOG',
-      url: '#'
+      url: '/blog'
     },
     {
       name: 'ACCESS',
-      url: '#'
+      url: '/access'
+    }
+  ],
+  workItems: [
+    {
+      src: require('../assets/img/prof-1.jpg'),
+      url: '/work#work-1'
+    },
+    {
+      src: require('../assets/img/prof-2.jpg'),
+      url: '/work#work-2'
+    },
+    {
+      src: require('../assets/img/prof-3.jpg'),
+      url: '/work#work-3'
     }
   ]
 }
