@@ -23,6 +23,7 @@ export default {
 .background-holder__content {
   background: url("../assets/img/home-hero.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-position: center center;
   width: 100%;
   height: 30vh;

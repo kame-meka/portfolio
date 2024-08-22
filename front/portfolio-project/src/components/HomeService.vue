@@ -1,24 +1,21 @@
 <template>
   <section class="home-service">
+    <div id="works-head" class="head-margin"></div>
     <div class="section__title">
-      <div class="section__title-text">03. My Service</div>
+      <div class="section__title-text sixtyfour-font">Works</div>
     </div>
-    <!-- ここから追加 -->
     <v-container>
       <v-row class="home-service__contents">
         <v-col md="3">
-          <v-card
-            to="/service#direction"
-            hover
-          >
+          <v-card to="/service#direction" hover>
             <div class="home-service__card-title">
-              <h3>ディレクション</h3>
+              <h3>ポートフォリオ</h3>
             </div>
             <div class="home-service__card-img">
               <img class="icon--service" :src="require('../assets/logo.png')" alt="ディレクション">
             </div>
             <div class="home-service__card-text">
-              <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              <p>このWebサイトです。</p>
             </div>
           </v-card>
         </v-col>
@@ -28,39 +25,22 @@
             hover
           >
             <div class="home-service__card-title">
-              <h3>コーディング</h3>
+              <h3>図鑑作成サービス</h3>
             </div>
             <div class="home-service__card-img">
               <img class="icon--service" :src="require('../assets/logo.png')" alt="コーディング">
             </div>
             <div class="home-service__card-text">
-              <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-            </div>
-          </v-card>
-        </v-col>
-        <v-col md="3">
-          <v-card
-            to="/service#design"
-            hover
-          >
-            <div class="home-service__card-title">
-              <h3>デザイン</h3>
-            </div>
-            <div class="home-service__card-img">
-              <img class="icon--service" :src="require('../assets/logo.png')" alt="デザイン">
-            </div>
-            <div class="home-service__card-text">
-              <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+              <p>オリジナルの図鑑を作成できるアプリケーションです。</p>
             </div>
           </v-card>
         </v-col>
       </v-row>
     </v-container>
-    <!-- ここまで追加 -->
   </section>
 </template>
-// ここから追加
-<style  lang="scss" scoped>
+
+<style lang="scss" scoped>
 .home-service__contents {
   margin-top: 20px;
   justify-content: center;
@@ -93,4 +73,3 @@
   }
 }
 </style>
-// ここまで追加

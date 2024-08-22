@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS `library`;
+CREATE DATABASE IF NOT EXISTS `visual_dictionary`;
 
-USE `library`;
+USE `visual_dictionary`;
 
 CREATE TABLE IF NOT EXISTS `author` (
   `id` int NOT NULL AUTO_INCREMENT,
