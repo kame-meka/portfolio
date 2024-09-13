@@ -1,4 +1,5 @@
 plugins {
+	application
 	id("org.springframework.boot") version "3.3.0"
 	id("io.spring.dependency-management") version "1.1.5"
 	kotlin("jvm") version "1.9.24"
@@ -56,7 +57,7 @@ jooq {
 	    create("main") {
 		    jooqConfiguration.apply {
 		        jdbc.apply {
-		            url = "jdbc:mysql://127.0.0.1:13306/visual_dictionary"
+		            url = "jdbc:mysql://db:3306/visual_dictionary"
 		            user = "root"
 		            password = "root"
 		        }
