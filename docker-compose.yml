@@ -1,27 +1,33 @@
-version: '3'
+version: '3.8'
 services:
-  app:
-    image: portfolio   # KotlinバックエンドアプリケーションのDockerイメージ
-    build:
-      context: ./backend                   # Dockerfileの場所（プロジェクトのルート）
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: visual_dictionary
     ports:
-      - "8080:8080"                # ホストのポート8080をコンテナの8080にマッピング
+      - "13306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+    volumes:
+      - db_data:/var/lib/mysql
+
+  app:
+    build:
+      context: ./backend                   # Dockerfileの場所
+      dockerfile: Dockerfile               # 明示的にDockerfileを指定（必要に応じて）
+    image: portfolio                        # KotlinバックエンドアプリケーションのDockerイメージ
+    ports:
+      - "8080:8080"
     depends_on:
-      - db                         # MySQLコンテナが先に起動するように設定
+      db:
+        condition: service_healthy
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/visual_dictionary
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=root
-
-  db:
-    image: mysql:8.0               # MySQLのDockerイメージ
-    environment:
-      MYSQL_ROOT_PASSWORD: root     # rootユーザーのパスワード設定
-      MYSQL_DATABASE: visual_dictionary # 作成したいデータベース名
-    ports:
-      - "3306:3306"                # ホストの3306ポートをMySQLの3306ポートにマッピング
-    volumes:
-      - db_data:/var/lib/mysql      # MySQLデータの永続化
 
 volumes:
   db_data:
