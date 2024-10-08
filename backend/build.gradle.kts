@@ -13,7 +13,7 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion.set(JavaLanguageVersion.of(17))
 	}
 }
 
@@ -52,14 +52,33 @@ kotlin {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+tasks.withType<org.flywaydb.gradle.task.FlywayMigrateTask> {
+	if (System.getenv("SKIP_FLYWAY_MIGRATION") == "true") {
+		enabled = false
+	}
+}
+
+tasks.withType<nu.studer.gradle.jooq.JooqGenerate> {
+	if (System.getenv("SKIP_JOOQ_GENERATION") == "true") {
+		enabled = false
+	}
+}
+
+afterEvaluate {
+	tasks.named("generateJooq") {
+		dependsOn(tasks.flywayMigrate)
+	}
+}
+
 jooq {
 	configurations {
 	    create("main") {
 		    jooqConfiguration.apply {
 		        jdbc.apply {
 		            url = "jdbc:mysql://db:3306/visual_dictionary"
-		            user = "root"
-		            password = "root"
+		            user = "user"
+		            password = "password"
 		        }
 		        generator.apply {
                     name = "org.jooq.codegen.KotlinGenerator"
@@ -74,7 +93,7 @@ jooq {
                     }
                     target.apply {
                         packageName = "com.example.ktknowledgeTodo.infra.jooq"
-                        directory = "$buildDir/generated/source/jooq/main"
+						directory = layout.buildDirectory.dir("generated/source/jooq/main").get().asFile.toString()
                     }
                 }
             }

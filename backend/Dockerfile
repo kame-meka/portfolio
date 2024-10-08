@@ -1,14 +1,9 @@
-FROM openjdk:17-jdk-slim
-WORKDIR /app
-RUN apt-get update && apt-get install -y git
-RUN git clone https://github.com/kame-meka/portfolio.git /app
-WORKDIR /app/backend
-RUN ./gradlew build
-RUN ./gradlew installDist
-EXPOSE 8080
-ENV SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/visual_dictionary
-ENV SPRING_DATASOURCE_USERNAME=root
-ENV SPRING_DATASOURCE_PASSWORD=root
+FROM gradle:8.10.1-jdk17 AS builder
+WORKDIR /work
+COPY . /work
+RUN ./gradlew bootJar
 
-# アプリケーションの起動
-CMD ["./build/install/portfolio/bin/portfolio"]
+FROM eclipse-temurin:17-jdk-alpine
+WORKDIR /app
+COPY --from=builder /work/build/libs/*.jar /app/app.jar
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]

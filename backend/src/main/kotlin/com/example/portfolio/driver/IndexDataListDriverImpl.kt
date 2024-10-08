@@ -64,10 +64,10 @@ class IndexDataListDriverImpl(private val dslContext: DSLContext): IndexDataList
         }
     }
 
-    override fun deleteById(id: Int) {
+    override fun deleteById(i: Int) {
         this.dslContext
             .deleteFrom(DICTIONARY)
-            .where(DICTIONARY.ID.eq(id))
+            .where(DICTIONARY.ID.eq(i))
             .execute()
     }
 
