@@ -77,7 +77,7 @@ jooq {
 	    create("main") {
 		    jooqConfiguration.apply {
 		        jdbc.apply {
-		            url = "jdbc:mysql://localhost:13306/visual_dictionary"
+		            url = "jdbc:mysql://db:3306/visual_dictionary"
 		            user = "user"
 		            password = "password"
 		        }
