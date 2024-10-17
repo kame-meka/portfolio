@@ -49,6 +49,9 @@
 </template>
 
 <style lang="scss" scoped>
+.home-hero {
+  height: 100%
+}
 .home-hero__content {
   width: 100%;
   height: 80vh;

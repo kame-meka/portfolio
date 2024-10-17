@@ -24,6 +24,7 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-jooq")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	runtimeOnly("com.mysql:mysql-connector-j")
@@ -76,7 +77,7 @@ jooq {
 	    create("main") {
 		    jooqConfiguration.apply {
 		        jdbc.apply {
-		            url = "jdbc:mysql://db:3306/visual_dictionary"
+		            url = "jdbc:mysql://localhost:13306/visual_dictionary"
 		            user = "user"
 		            password = "password"
 		        }

@@ -4,6 +4,7 @@ import io.minio.GetObjectArgs
 import io.minio.MinioClient
 import io.minio.PutObjectArgs
 import io.minio.RemoveObjectArgs
+import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Repository
 import org.springframework.web.multipart.MultipartFile
 import java.io.ByteArrayOutputStream
@@ -12,12 +13,21 @@ import kotlin.Exception
 
 @Repository
 class StorageDriverImpl(): StorageDriver {
+    @Value("\${minio.url}")
+    lateinit var minioUrl: String
+
+    @Value("\${minio.access-key}")
+    lateinit var minioAccessKey: String
+
+    @Value("\${minio.secret-key}")
+    lateinit var minioSecretKey: String
+
     override fun storeImage(imageFile: MultipartFile, insertId: Int) {
         try {
             MinioClient
                 .builder()
-                .endpoint("http://127.0.0.1:9000")
-                .credentials("ROOTNAME", "CHANGEME123")
+                .endpoint(minioUrl)
+                .credentials(minioAccessKey, minioSecretKey)
                 .build()
                 .putObject(
                     PutObjectArgs.builder()
@@ -38,8 +48,8 @@ class StorageDriverImpl(): StorageDriver {
         return try {
             val response = MinioClient
                 .builder()
-                .endpoint("http://127.0.0.1:9000")
-                .credentials("ROOTNAME", "CHANGEME123")
+                .endpoint(minioUrl)
+                .credentials(minioAccessKey, minioSecretKey)
                 .build()
                 .getObject(
                     GetObjectArgs
@@ -53,7 +63,8 @@ class StorageDriverImpl(): StorageDriver {
             response.transferTo(byteArrayOutputStream)
             byteArrayOutputStream.toByteArray()
         } catch (e: IOException) {
-            throw IOException("IO error: ${e.message}")
+            println("IO error: ${e.message}")
+            ByteArray(0)
         } catch (e: Exception) {
             throw Exception("An unknown error has occurred")
         }
@@ -63,8 +74,8 @@ class StorageDriverImpl(): StorageDriver {
         try {
             MinioClient
                 .builder()
-                .endpoint("http://127.0.0.1:9000")
-                .credentials("ROOTNAME", "CHANGEME123")
+                .endpoint(minioUrl)
+                .credentials(minioAccessKey, minioSecretKey)
                 .build()
                 .removeObject(
                     RemoveObjectArgs.builder()

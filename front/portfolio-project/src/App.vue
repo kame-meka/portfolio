@@ -30,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
   <v-app>
     <AppHeader/>
-    <v-content>
+    <v-content class="footer-keep">
       <router-view/>
     </v-content>
     <AppFooter/>
@@ -67,7 +67,6 @@ $(window).scroll(function (){
 html {
   scroll-behavior: smooth;
 }
-
 .bad-script-regular {
   font-family: "Bad Script", cursive;
   font-weight: 400;
@@ -411,5 +410,9 @@ html {
   display: block;
   opacity: 1;
   animation: fadeOut 0.3s ease-out 0s forwards;
+}
+.footer-keep {
+  flex: 1 auto;
+  height: 100%;
 }
 </style>

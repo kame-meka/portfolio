@@ -54,7 +54,7 @@
               <p class="section-title">【概要】</p>
               <p>ポートフォリオ用に作成した、オリジナルの図鑑を作成できるサービスです。</p>
               <p>画像、タイトル、説明文、タグ情報を登録でき、キーワード検索・タグ検索機能で絞り込むことが可能です。</p>
-              <a href="/service" target="_blank">別タブでページを開く</a>
+              <a href="/login" target="_blank">別タブでページを開く</a>
               <div class="port-img-frame">
                 <img :src="require('@/assets/img/portf2.png')" alt="" class="port-img">
               </div>

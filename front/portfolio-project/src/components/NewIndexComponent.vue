@@ -1,5 +1,4 @@
 <template>
-  <section class="home-hero">
     <div class="new-frame-outer">
       <div class="new-frame sentence-0">
         <div class="new-frame-left">
@@ -29,7 +28,6 @@
         </div>
       </div>
     </div>
-  </section>
 </template>
 
 <script>

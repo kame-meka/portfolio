@@ -1,5 +1,5 @@
 <template>
-  <section class="home-hero">
+  <section class="home-hero footer-keep">
     <v-container fluid fill-height class="home-Service__content">
       <div class="search-frame-outer">
         <div class="search-frame">
@@ -96,6 +96,7 @@ export default {
       console.log('loading')
       axios.get('http://localhost:8080/api/v1/load')
       .then((response) => {
+        console.log(response)
         if (response.data) {
           this.displayItem = response.data.indexDataList.map(item => {
             return {
@@ -175,6 +176,9 @@ export default {
 </script>
 
 <style scoped>
+.home-hero {
+  height: 100%;
+}
 .home-Service__content {
   background: url("../assets/img/home-service.jpg");
   background-size: cover;
