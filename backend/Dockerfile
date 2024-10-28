@@ -1,6 +1,7 @@
 FROM gradle:8.10.1-jdk17 AS builder
 WORKDIR /work
 COPY . /work
+RUN ./gradlew clean
 RUN ./gradlew bootJar
 
 FROM eclipse-temurin:17-jdk-alpine
