@@ -4,25 +4,25 @@
     <a href="http://localhost:8081/" class="title sixtyfour-font">Portfolio Website</a>
     <nav>
       <ul class="menu-group sixtyfour-font menuItem">
-        <li class="menu-item"><a href="http://localhost:8081/#hero-head">HOME</a></li>
-        <li class="menu-item"><a href="http://localhost:8081/#about-head">PROFILE</a></li>
-        <li class="menu-item"><a href="http://localhost:8081/#skills-head">SKILLS</a></li>
-        <li class="menu-item"><a href="http://localhost:8081/#works-head">WORKS</a></li>
+        <li class="menu-item"><a href="http://portfolio.mvcatcp.com:8081/#hero-head">HOME</a></li>
+        <li class="menu-item"><a href="http://portfolio.mvcatcp.com:8081/#about-head">PROFILE</a></li>
+        <li class="menu-item"><a href="http://portfolio.mvcatcp.com:8081/#skills-head">SKILLS</a></li>
+        <li class="menu-item"><a href="http://portfolio.mvcatcp.com:8081/#works-head">WORKS</a></li>
       </ul>
     </nav>
     <v-navigation-drawer v-model="drawer" fixed temporary>
       <v-list nav>
         <v-list-item>
-          <li class="menu-item"><a href="http://localhost:8081/#hero-head">HOME</a></li>
+          <li class="menu-item"><a href="http://portfolio.mvcatcp.com:8081/#hero-head">HOME</a></li>
         </v-list-item>
         <v-list-item>
-          <li class="menu-item"><a href="http://localhost:8081/#about-head">PROFILE</a></li>
+          <li class="menu-item"><a href="http://portfolio.mvcatcp.com:8081/#about-head">PROFILE</a></li>
         </v-list-item>
         <v-list-item>
-          <li class="menu-item"><a href="http://localhost:8081/#skills-head">SKILLS</a></li>
+          <li class="menu-item"><a href="http://portfolio.mvcatcp.com:8081/#skills-head">SKILLS</a></li>
         </v-list-item>
         <v-list-item>
-          <li class="menu-item"><a href="http://localhost:8081/#works-head">WORKS</a></li>
+          <li class="menu-item"><a href="http://portfolio.mvcatcp.com:8081/#works-head">WORKS</a></li>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>

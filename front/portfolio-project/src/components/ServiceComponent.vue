@@ -94,7 +94,7 @@ export default {
     },
     loadMapping: function loadMapping() {
       console.log('loading')
-      axios.get('http://localhost:8080/api/v1/load')
+      axios.get('http://portfolio.mvcatcp.com:8080/api/v1/load')
       .then((response) => {
         console.log(response)
         if (response.data) {
@@ -116,7 +116,7 @@ export default {
         this.loading = false;
       });
 
-      axios.get('http://localhost:8080/api/v1/all-tags')
+      axios.get('http://portfolio.mvcatcp.com:8080/api/v1/all-tags')
       .then(response => {
         this.options = response.data.list.map(item => ({
           value: item.tagId,
@@ -150,7 +150,7 @@ export default {
       const tagsOrCondition = document.getElementById('tag-search-or-checkbox').checked;
       const tagIds = tags.map(item => item.id);
 
-      axios.get(`http://localhost:8080/api/v1/search?keywords=${encodeURIComponent(keyword)}&keywordsOrCondition=${keywordsOrCondition}&tagIds=${tagIds}&tagsOrCondition=${tagsOrCondition}`)
+      axios.get(`http://portfolio.mvcatcp.com:8080/api/v1/search?keywords=${encodeURIComponent(keyword)}&keywordsOrCondition=${keywordsOrCondition}&tagIds=${tagIds}&tagsOrCondition=${tagsOrCondition}`)
       .then((response) => {
         if (response.data) {
           this.displayItem = response.data.indexDataList.map(item => {

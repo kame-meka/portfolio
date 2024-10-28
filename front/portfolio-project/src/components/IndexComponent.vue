@@ -128,7 +128,7 @@ export default {
     },
     deleteItem: function deleteItem() {
       const indexId = this.item.id
-      axios.delete(`http://localhost:8080/api/v1/delete/${indexId}`)
+      axios.delete(`http://portfolio.mvcatcp.com:8080/api/v1/delete/${indexId}`)
       .then((response) => {
         if (response.data) {
           console.log(response.data.indexDataList);
@@ -181,7 +181,7 @@ export default {
       formData.append('description', description.value);
       formData.append('tagsData', JSON.stringify({ list: tagsData }));
 
-      fetch('http://localhost:8080/api/v1/update', {
+      fetch('http://portfolio.mvcatcp.com:8080/api/v1/update', {
         method: 'POST',
         body: formData
       })

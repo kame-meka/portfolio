@@ -22,7 +22,7 @@ export default {
     }
   },
   created() {
-    axios.get('http://localhost:8080/api/v1/all-tags')
+    axios.get('http://portfolio.mvcatcp.com:8080/api/v1/all-tags')
     .then(response => {
       this.options = response.data.list.map(item => ({
         value: item.tagId,

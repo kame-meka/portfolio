@@ -11,8 +11,9 @@
             <label for="password" class="input-label m-plus-rounded-1c-light">パスワード:</label>
             <input v-model="password" type="password" id="password" class="keyword-box" required>
           </div>
-          <div>
-            <a class="new-buttons btn-border-login m-plus-rounded-1c-light" @click="login">ログイン</a>
+          <div class="guest-label m-plus-rounded-1c-light">※ゲスト用：<u>guest</u>／<u>password</u></div>
+          <div class="login-button-frame">
+            <button class="login-button btn-border-login m-plus-rounded-1c-light" @click="login">ログイン</button>
           </div>
           <div v-if="errorMessage" style="color: red;">{{ errorMessage }}</div>
         </div>
@@ -33,7 +34,7 @@ export default {
   methods: {
     async login() {
       try {
-        const response = await fetch("http://localhost:8080/login", {
+        const response = await fetch("http://portfolio.mvcatcp.com:8080/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded"
@@ -85,7 +86,7 @@ export default {
 }
 .keyword-box {
   background-color: white;
-  padding: 16px;
+  padding: 8px;
   border-radius: 4px;
   border: 1px solid #aaa;
 }
@@ -125,7 +126,7 @@ export default {
   justify-content: center;
 }
 
-a {
+button {
   text-decoration:none;
   font-weight: bold;
   color: white;
@@ -135,31 +136,34 @@ a {
   align-items: center;
   cursor: pointer;
 }
-a.btn-border {
+button.btn-border {
   border: 2px solid blue;
   border-radius: 16px;
   background: blue;
 }
-a.btn-border:hover {
+button.btn-border:hover {
   border: 2px solid blue;
   color: black;
   background: white;
+  padding: 8px;
+  width: 100%;
 }
-a.btn-border-login {
+button.btn-border-login {
   border: 2px solid black;
   border-radius: 4px;
   background: black;
-  padding: 8px 16px 8px 16px;
+  padding: 8px;
+  width: 100%;
 }
-a.btn-border-login:hover {
+button.btn-border-login:hover {
   border: 2px solid black;
   color: black;
   background: white;
-  padding: 8px 16px;
+  padding: 8px;
+  width: 100%;
 }
-.new-buttons {
+.login-button {
   color: white;
-  margin-top: 16px;
 }
 .under-margin {
   height: 10vh;
@@ -170,5 +174,16 @@ a.btn-border-login:hover {
 .input-label {
   margin-right: 16px;
   font-weight: bold;
+}
+.guest-label {
+  font-weight: bold;
+  color: green;
+  display: flex;
+  justify-content: center;
+}
+.login-button-frame {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
 }
 </style>

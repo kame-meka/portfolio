@@ -96,7 +96,7 @@ export default {
       formData.append('description', description.value);
       formData.append('tagsData', JSON.stringify({ list: tagsData }));
 
-      fetch('http://localhost:8080/api/v1/register', {
+      fetch('http://portfolio.mvcatcp.com:8080/api/v1/register', {
         method: 'POST',
         body: formData
       })

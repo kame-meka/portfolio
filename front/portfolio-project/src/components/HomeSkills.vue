@@ -15,19 +15,19 @@
                 <p class="stars-fill">★★★</p>
                 <p class="stars-empty">☆☆</p>
               </div>
+              <p class="skill-comment">→Webアプリケーション開発に必要な基礎を習得済み</p>
               <div class="skill-content">
                 <p class="skill-content-title">javascript</p>
                 <p class="stars-fill">★★★★</p>
                 <p class="stars-empty">☆</p>
               </div>
+              <p class="skill-comment">→非同期通信を利用した処理等を記述可能</p>
               <div class="skill-content">
                 <p class="skill-content-title">Vue.js</p>
                 <p class="stars-fill">★★★</p>
                 <p class="stars-empty">☆☆</p>
               </div>
-              <p class="skill-comment">→Webシステム開発に必要な基礎を習得済み</p>
-              <p class="skill-comment">→非同期通信を利用した処理等を記述可能</p>
-              <p class="skill-comment">→SPAの構築が可能</p>
+              <p class="skill-comment">→SPAを構築可能</p>
             </div>
           </div>
           <div class="skill-frame fadein fadein-right">
@@ -40,14 +40,13 @@
               </div>
               <div class="skill-content">
                 <p class="skill-content-title">Java</p>
-                <p class="stars-fill">★★★</p>
-                <p class="stars-empty">☆☆</p>
+                <p class="stars-fill">★★★★</p>
+                <p class="stars-empty">☆</p>
               </div>
-              <p class="skill-comment">→SpringBootフレームワークでWebサーバーを構築可能</p>
-              <p class="skill-comment">→DIコンテナを活用し、テストしやすい設計を構築可能</p>
-              <p class="skill-comment">→JUnitでの単体テストを実装可能</p>
-              <p class="skill-comment">→Gauge + Selenideで仕様書を兼ねた自動E2Eテストを実装可能</p>
               <p class="skill-comment">→OCJP Gold SE7認定資格を保持</p>
+              <p class="skill-comment">→SpringBootフレームワークでWebサーバーを構築可能</p>
+              <p class="skill-comment">→DIコンテナを活用し、JUnitでの単体テストを行いやすい設計に構築可能</p>
+              <p class="skill-comment">→Gauge + Selenideで仕様書を兼ねた自動E2Eテストを実装可能</p>
             </div>
           </div>
           <div class="skill-frame fadein fadein-right">
@@ -95,12 +94,13 @@
                 <p class="stars-fill">★★★</p>
                 <p class="stars-empty">☆☆</p>
               </div>
+              <p class="skill-comment">→Dockerfile、docker-compose.ymlを記述しての環境構築が可能</p>
               <div class="skill-content">
                 <p class="skill-content-title">Kubernetes</p>
                 <p class="stars-fill">★★</p>
                 <p class="stars-empty">☆☆☆</p>
               </div>
-              <p class="skill-comment">→ECS on EC2でWebサービス展開が可能（このサイト）</p>
+              <p class="skill-comment">→業務での使用経験あり</p>
             </div>
           </div>
           <div class="skill-frame fadein fadein-right">
@@ -111,8 +111,8 @@
                 <p class="stars-fill">★★★</p>
                 <p class="stars-empty">☆☆</p>
               </div>
-              <p class="skill-comment">→自身のアカウントでWebサービスを展開中（このサイト）</p>
               <p class="skill-comment">→AWS Cloud Practitioner認定資格を保持</p>
+              <p class="skill-comment">→自身のアカウントでWebサービスを展開中（このサイト）</p>
               <div class="skill-content">
                 <p class="skill-content-title">GCP</p>
                 <p class="stars-fill">★★</p>
@@ -131,16 +131,26 @@
                 <p class="stars-fill">★★★★</p>
                 <p class="stars-empty">☆</p>
               </div>
+              <p class="skill-comment">→実装前にテストコードを書き、先に全体像を把握することが可能</p>
               <div class="skill-content">
                 <p class="skill-content-title">ドメイン駆動設計</p>
                 <p class="stars-fill">★★★</p>
                 <p class="stars-empty">☆☆</p>
               </div>
+              <p class="skill-comment">→業務知識をひとまとめにコードに落とし込み、</p>
+              <p class="skill-comment"> 保守拡張が容易でコードから仕様把握しやすい設計が可能</p>
               <div class="skill-content">
-                <p class="skill-content-title">ペアプログラミング</p>
-                <p class="stars-fill">★★★</p>
-                <p class="stars-empty">☆☆</p>
+                <p class="skill-content-title">クリーンアーキテクチャ</p>
+                <p class="stars-fill">★★★★</p>
+                <p class="stars-empty">☆</p>
               </div>
+              <p class="skill-comment">→外部システム等の変更に影響を受けにくく、テストしやすい設計に構築可能</p>
+              <div class="skill-content">
+                <p class="skill-content-title">ペア・モブプログラミング</p>
+                <p class="stars-fill">★★★★</p>
+                <p class="stars-empty">☆</p>
+              </div>
+              <p class="skill-comment">→ペアやチームで常に意見や知見を共有しつつコーディングする手法が可能</p>
               <div class="skill-content">
                 <p class="skill-content-title">CI/CDパイプライン</p>
                 <p class="stars-fill">★★</p>
