@@ -31,15 +31,10 @@
             </div>
           </div>
           <div class="skill-frame fadein fadein-right">
-            <p class="skill-title">JVM言語</p>
+            <p class="skill-title">コンパイル言語系</p>
             <div class="skill-content-frame">
               <div class="skill-content">
-                <p class="skill-content-title">Kotlin</p>
-                <p class="stars-fill">★★★★</p>
-                <p class="stars-empty">☆</p>
-              </div>
-              <div class="skill-content">
-                <p class="skill-content-title">Java</p>
+                <p class="skill-content-title">Java / Kotlin</p>
                 <p class="stars-fill">★★★★</p>
                 <p class="stars-empty">☆</p>
               </div>
@@ -47,18 +42,25 @@
               <p class="skill-comment">→SpringBootフレームワークでWebサーバーを構築可能</p>
               <p class="skill-comment">→DIコンテナを活用し、JUnitでの単体テストを行いやすい設計に構築可能</p>
               <p class="skill-comment">→Gauge + Selenideで仕様書を兼ねた自動E2Eテストを実装可能</p>
-            </div>
-          </div>
-          <div class="skill-frame fadein fadein-right">
-            <p class="skill-title">C言語系</p>
-            <div class="skill-content-frame">
+              <p class="skill-comment">→flyway + jooqでマイグレーションとORマッピングを行うことが可能</p>
               <div class="skill-content">
-                <p class="skill-content-title">C言語 / C++</p>
-                <p class="stars-fill">★★★</p>
-                <p class="stars-empty">☆☆</p>
+              <p class="skill-content-title">C言語 / C++</p>
+              <p class="stars-fill">★★★</p>
+              <p class="stars-empty">☆☆</p>
               </div>
               <p class="skill-comment">→デスクトップアプリケーションを作成可能</p>
               <p class="skill-comment">（例：オブジェクト指向を活用したシューティングゲーム等）</p>
+            </div>
+          </div>
+          <div class="skill-frame fadein fadein-right">
+            <p class="skill-title">スクリプト言語系</p>
+            <div class="skill-content-frame">
+              <div class="skill-content">
+                <p class="skill-content-title">PHP</p>
+                <p class="stars-fill">★★★</p>
+                <p class="stars-empty">☆☆</p>
+              </div>
+              <p class="skill-comment">→業務での使用経験あり（Laravel、PHPUnit）</p>
             </div>
           </div>
         </div>
@@ -100,7 +102,7 @@
                 <p class="stars-fill">★★</p>
                 <p class="stars-empty">☆☆☆</p>
               </div>
-              <p class="skill-comment">→業務での使用経験あり</p>
+              <p class="skill-comment">→業務での使用経験あり（minikubeを用いてローカル開発環境を構築）</p>
             </div>
           </div>
           <div class="skill-frame fadein fadein-right">

@@ -39,6 +39,7 @@
               <p class="mochiy-pop-one-regular font-white">★ プロ野球観戦</p>
               <p class="mochiy-pop-one-regular font-white">☆ ゲーム全般（アナログ・デジタル）</p>
               <p class="mochiy-pop-one-regular font-white">★ カラオケ</p>
+              <p class="mochiy-pop-one-regular font-white">☆ ウォーキング</p>
             </div>
           </div>
         </div>
